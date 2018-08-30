@@ -26,6 +26,7 @@ class Star
         this.radius = radius;
         this.alpha = alpha;
         this.speed = speed;
+
     }
 }
 
