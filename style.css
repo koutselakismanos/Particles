@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h5{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.button{
+    color: white;
+    font-size : 20px;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    padding: 20px 50px;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-family: "stratum","Arial Narrow","Trebuchet MS",sans-serif;
+    background-image: linear-gradient(135deg, #F79533 0%, #F37055 51%, #EF4E7B 100%);
+    display: inline-block;
+}
+
+.button:after{
+    content: '';
+    border-radius: 7px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 8px;
+    width: 100%;
+    display: box;
+    z-index: 1;
+    background-color: red;
+    background: linear-gradient(135deg, #E98C2F 0%, #DE654D 51%, #DD4A73 100%);
+}
