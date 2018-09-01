@@ -1,4 +1,4 @@
-var c = document.createElement('canvas');
+let c = document.createElement('canvas');
 
 c.style.border = '1px solid black';
 c.style.position = 'absolute';
@@ -9,7 +9,7 @@ document.body.appendChild(c);
 c.width = window.innerWidth;
 c.height = window.innerHeight;
 
-var ctx = c.getContext('2d');
+let ctx = c.getContext('2d');
 
 
 
@@ -30,7 +30,7 @@ class Star
     }
 }
 
-var stars = [];
+let stars = [];
 let starCount = 2000;
 
 for (let i = 0; i < starCount; i++)
@@ -52,8 +52,8 @@ for (let i = 0; i < starCount; i++)
 
 window.requestAnimationFrame(repeat);
 
-var x;
-var y;
+let x;
+let y;
 
 Number.prototype.map = function (in_min, in_max, out_min, out_max)
 {
@@ -62,14 +62,14 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max)
 
 function getMousePos(canvas, evt)
 {
-    var rect = canvas.getBoundingClientRect();
+    let rect = canvas.getBoundingClientRect();
     return {
         x: evt.clientX - rect.left,
         y: evt.clientY - rect.top
     };
 }
 
-var mousePos = {}; c.addEventListener('mousemove', function (evt)
+let mousePos = {}; c.addEventListener('mousemove', function (evt)
 {
     mousePos = getMousePos(c, evt);
     console.log('Mouse position: ' + mousePos.x + ',' + mousePos.y);
@@ -102,7 +102,7 @@ function repeat()
 
         // console.log()
         // ctx.strokeStyle = 'white';
-        var grad = ctx.createLinearGradient(0, 0, 500, 1000);
+        let grad = ctx.createLinearGradient(0, 0, 500, 1000);
         grad.addColorStop(0, 'rgba(255, 255, 255,' + stars[i].posX.map(0, window.innerWidth, 0, 0.2) + ')');
 
         grad.addColorStop(1, "gray");

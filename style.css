@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    overflow: hidden;
+}
+
 h5{
     color: white;
     font-size: 50px;
